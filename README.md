@@ -1,5 +1,30 @@
 # Gift List
 
+## Project Description
+
+The goal of this project is to demonstrate an understanding of merkle trees by building a client and server system. In a blockchain network, all nodes must store and verify transactions, but data storage capacity can be a limiting factor. In this project, the server can only store up to 32 bytes of data and is unable to store an entire list of names (as seen in the provided niceList.json).
+
+The client's objective is to determine whether a given name is present in the list of names. To accomplish this, I utilized my knowledge of creating valid merkle trees to generate a merkle root and its corresponding merkle proof.
+
+Specifically, the client generates a merkle proof and passes the name, proof, and merkle root to the server. The server then verifies if the name is present in the merkle tree by reconstructing the merkle root using the provided proof and comparing it to the merkle root transmitted by the client.
+
+
+## How it works 
+
+Note: install packages for `client` and `node` first 
+
+```
+node server/index.js 
+node client/index.js [name]
+```
+
+To pass a name as a command line argument when running the client, use the following format:
+```node client/index.js "Sidney Kertzmann"``` 
+
+
+# Instructions 
+
+
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the depedencies.
 
 There are three folders in this repository:
